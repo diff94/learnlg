@@ -1,5 +1,4 @@
-import { BrowserRouter } from "react-router-dom";
-import { Link, Switch, Route, Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 export default function Layout() {
   return (
     <>

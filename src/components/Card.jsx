@@ -10,7 +10,7 @@ export default function Card({
   word,
   part_of_speech,
   definition,
-  handleExampleClick,
+  // handleExampleClick,
   example,
 }) {
   const [color, setColor] = useState(initialColor); //起始值
