@@ -5,6 +5,7 @@ import Favorite from "../components/Favortive";
 import { useState } from "react";
 //import component function from the file
 import "../styles.css";
+import { Heading } from "@chakra-ui/react";
 
 const vocabularies = [
   {
@@ -40,7 +41,14 @@ function Flashcard() {
 
   return (
     <div>
-      <Header title={"My Flash Card"} />
+      {/* <Header title={"My Flash Card"} /> */}
+      <Heading
+        size="lg"
+        fontSize="50px"
+        bgGradient="linear(to-l, yellow.200, blue.300)"
+      >
+        My Flash Card
+      </Heading>
 
       <div>
         {/* The Content component is responsible to render the vocabularies

@@ -1,6 +1,14 @@
 import { useEffect, useState } from "react";
 import getLg from "../services/getlg";
 import translate from "../services/translate";
+import {
+  Heading,
+  Select,
+  Textarea,
+  FormControl,
+  FormLabel,
+  Button,
+} from "@chakra-ui/react";
 // import {
 //   Menu,
 //   MenuButton,
@@ -47,15 +55,30 @@ export default function Translate() {
   };
 
   return (
-    <>
-      <h1>Translate </h1>
+    <div>
+      {/* <h1>Translate </h1> */}
       {/* <p>
         The optgroup tag is used to group related options in a drop-down list:
       </p> */}
+      <Heading
+        size="lg"
+        fontSize="50px"
+        bgGradient="linear(to-l, yellow.200, pink.300)"
+      >
+        Translate
+      </Heading>
 
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="sourcelg">Choose a source language:</label>
-        <select
+      <FormControl onSubmit={handleSubmit}>
+        <FormLabel as="legend" htmlFor="sourcelg">
+          Choose a source language:
+        </FormLabel>
+        <Select
+          placeholder="Select option"
+          size="md"
+          variant="outline"
+          bg="sky"
+          borderColor="blue"
+          color="darkblue"
           name="sourcelg"
           id="sourcelg"
           value={sourceSelect}
@@ -80,9 +103,17 @@ export default function Translate() {
             <option value="japanese">Japanese</option>
             <option value="korea">Korea</option>
           </optgroup> */}
-        </select>
-        <label htmlFor="targetlg">Choose a target language:</label>
-        <select
+        </Select>
+        <FormLabel as="legend" htmlFor="targetlg">
+          Choose a target language:
+        </FormLabel>
+        <Select
+          placeholder="Select option"
+          size="md"
+          variant="outline"
+          bg="sky"
+          borderColor="blue"
+          color="darkblue"
           name="targetlg"
           id="targetlg"
           value={targetSelect}
@@ -107,19 +138,22 @@ export default function Translate() {
             <option value="japanese">Japanese</option>
             <option value="korea">Korea</option>
           </optgroup> */}
-        </select>
+        </Select>
 
         <input type="submit" value="Submit" />
-      </form>
+      </FormControl>
 
       <p>
-        <label htmlFor="sourcelg">Source Language:</label>
+        <FormLabel as="legend" htmlFor="sourcelg">
+          Source Language:
+        </FormLabel>
       </p>
-      <textarea
+      <Textarea
         id="sourcelg"
         name="sourcelg"
         rows="15"
         cols="50"
+        size="sm"
         value={sourcelg}
         placeholder="請輸入要翻譯的文字QQ"
         onChange={(e) => {
@@ -127,19 +161,22 @@ export default function Translate() {
         }}
       />
       <p>
-        <label htmlFor="targetlg">Target Language:</label>
+        <FormLabel as="legend" htmlFor="targetlg">
+          Target Language:
+        </FormLabel>
       </p>
-      <textarea
+      <Textarea
         id="targetlg"
         name="targetlg"
         rows="15"
         cols="50"
+        size="sm"
         value={targetlg}
         placeholder="Translatred texts will be placed here.QuQ"
         onChange={(e) => {
           setTargetlg(e.target.value);
         }}
       />
-    </>
+    </div>
   );
 }
