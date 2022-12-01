@@ -1,4 +1,4 @@
-import { NavLink, Link, Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom"; //NavLink,
 import "./Layout.css";
 // import styled from "styled-components";
 // import React from "react";
