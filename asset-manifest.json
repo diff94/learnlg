@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/learnlg/static/css/main.4b675fbf.css",
+    "main.js": "/learnlg/static/js/main.b18a6fb4.js",
+    "index.html": "/learnlg/index.html",
+    "main.4b675fbf.css.map": "/learnlg/static/css/main.4b675fbf.css.map",
+    "main.b18a6fb4.js.map": "/learnlg/static/js/main.b18a6fb4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4b675fbf.css",
+    "static/js/main.b18a6fb4.js"
+  ]
+}
